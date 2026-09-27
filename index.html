@@ -2,46 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Jason Ziegler's Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jason M. Ziegler builds ambitious systems exploring agency, participation, and shared value.">
+  <meta name="theme-color" content="#071014">
+  <title>Jason M. Ziegler — Ambitious systems, made real</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23071014'/%3E%3Cpath d='M17 17h30v9H27v8h15v9H27v4H17V17Z' fill='%2358e6d9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
-<div>
-  <header>
-    <nav>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Experience and Education</a></li>
+  <a class="skip-link" href="#work">Skip to selected work</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Jason M. Ziegler, home">
+      <span class="wordmark-mark" aria-hidden="true">JZ</span>
+      <span>Jason M. Ziegler</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#ideas">Ideas</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <img src="me.png" alt="Drawing of Jason Ziegler">
-    <h1>Jason Ziegler</h1>
-    <p>Location: New Braunfels, TX, USA</p>
   </header>
-  <main>
-    <h2>Background</h2>
-    <p>I'm an aspiring JavaScript Developer who sci-fi, anime, and baseball. I work full time as a Keap Certified Coach, but want to build exciting JavaScript projects. I'm excited to bring my life experience to the process of building JavaScript apps.</p>
-    <p>I've been an English Teacher, Environmental Activist, and Pizza Restaurant Manager and am a life-long learner who's always interested in expanding my skills.</p>
-    <h2>Goals</h2>
-    <p>I want to master the process of responsive web apps and increase my knowledge, skills and abilities in:</p>
-    <ul>
-       <li>HTML</li>
-       <li>CSS</li>
-       <li>JavaScript</li>
-       <li>Postgres SQL</li>
-       <li>Express</li>
-       <li>React</li>
-       <li>Node</li>
-    </ul>
-    <p>I'd like to work for a Startup Company helping to create a useful app preferably using blockchain technology.</p>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Ambitious systems · Small, testable steps</p>
+        <h1 id="hero-title">I build toward bigger ideas, one real system at a time.</h1>
+        <p class="hero-summary">I explore how software can give people more agency over attention, participation, and value—across AI tools, games, and experiments in how communities organize.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work</a>
+          <a class="button button-secondary" href="https://github.com/jasonmziegler">View GitHub profile</a>
+        </div>
+      </div>
+
+      <aside class="signal-board" aria-label="Questions that guide the work">
+        <div class="signal-heading"><span>Questions I return to</span><span class="signal-pulse" aria-hidden="true"></span></div>
+        <ul>
+          <li><span class="signal-number">01</span><span><strong>Who sets the rules?</strong><small>Agency inside the system</small></span></li>
+          <li><span class="signal-number">02</span><span><strong>What carries forward?</strong><small>Actions with consequences</small></span></li>
+          <li><span class="signal-number">03</span><span><strong>Who receives the value?</strong><small>Participation with a stake</small></span></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Selected work</p><h2 id="work-title">Projects as working experiments</h2></div>
+        <p>Each project begins with a larger question, then narrows to something concrete enough to build, test, and learn from.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-featured">
+          <div class="project-meta"><span class="status status-active">Prototype</span><span>TypeScript · Supabase · Vitest</span></div>
+          <div class="project-index" aria-hidden="true">01</div>
+          <h3>Larn-like</h3>
+          <p>A persistent-world roguelike built around a question: what if a player’s choices and losses kept shaping the world after their character was gone?</p>
+          <ul class="project-proof" aria-label="Project highlights">
+            <li>Consequential permadeath</li><li>Evolving monsters and death sites</li><li>Persistent TypeScript systems</li>
+          </ul>
+          <a class="text-link" href="https://github.com/jasonmziegler/larn-like">View source <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span class="status status-active">In development</span><span>Python · Local LLMs · Flask</span></div>
+          <div class="project-index" aria-hidden="true">02</div>
+          <h3>Press S for Worker</h3>
+          <p>A local-first coding agent that makes tool use, memory, model behavior, and failure recovery understandable and controllable by the person running it.</p>
+          <ul class="project-proof" aria-label="Project highlights">
+            <li>Agent loop and tool factory</li><li>Local inference and model switching</li><li>Reliability grounded in tests</li>
+          </ul>
+          <a class="text-link" href="https://github.com/jasonmziegler/press-s-for-worker">View source <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span class="status status-review">Live check pending</span><span>PHP · MySQL · AI workflow</span></div>
+          <div class="project-index" aria-hidden="true">03</div>
+          <h3>DoneQuest</h3>
+          <p>A multi-user goal planner exploring how AI can help someone shape a plan without quietly taking control of their decisions.</p>
+          <ul class="project-proof" aria-label="Project highlights">
+            <li>Capture, review, and apply workflow</li><li>Account-scoped credentials</li><li>Explicit human approval</li>
+          </ul>
+          <a class="text-link" href="https://github.com/jasonmziegler/donequest">View source <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+
+      <div class="supporting-heading">
+        <p class="eyebrow">Also in motion</p>
+        <p>Other systems exploring movement, learning, and useful decisions.</p>
+      </div>
+      <div class="supporting-grid">
+        <article><span>Unity · C#</span><h3>Grasp of Eternity</h3><p>A game prototype bringing movement, combat, progression, audio, and world feel into one evolving system.</p><strong>Case study in progress</strong></article>
+        <article><span>Godot · Simulation</span><h3>Little Ecosystem</h3><p>An aquaponics learning simulation where experiments and farm layouts persist across sessions.</p><strong>Demo verification pending</strong></article>
+        <article><span>Next.js · Domain data</span><h3>PoE Profit Assistant</h3><p>A practical tool for turning complicated Path of Exile market information into clearer trading decisions.</p><a href="https://github.com/jasonmziegler/poe-profit-assistant">View source <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="ideas-section" id="ideas" aria-labelledby="ideas-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">An idea evolving</p><h2 id="ideas-title">Who controls attention—and who benefits from it?</h2></div>
+        <p>This question has appeared across several unfinished experiments. The mechanism changes; the concern underneath it remains.</p>
+      </div>
+
+      <div class="lineage" aria-label="Evolution from Attention to Larn-like to west.net">
+        <article>
+          <div class="lineage-number">01</div>
+          <p class="lineage-type">Earlier prototype</p>
+          <h3>Attention</h3>
+          <p>Give every person one movable pointer of attention. Direct it toward a cause or entrust it to someone whose judgment you value. Make collective priorities visible without manufacturing an infinite feed.</p>
+          <span>Attention as deliberate direction</span>
+        </article>
+        <article>
+          <div class="lineage-number">02</div>
+          <p class="lineage-type">Game-world experiment</p>
+          <h3>Larn-like</h3>
+          <p>Let participation leave something behind. A lost character still changes monsters, places, resources, and the experience of players who arrive later.</p>
+          <span>Participation as persistent value</span>
+        </article>
+        <article>
+          <div class="lineage-number">03</div>
+          <p class="lineage-type">Platform research</p>
+          <h3>west.net</h3>
+          <p>Replace an advertising system that captures attention with a transparent exchange in which creators and other contributors can receive value directly.</p>
+          <span>Attention as participant-controlled flow</span>
+        </article>
+      </div>
+
+      <p class="lineage-thesis">Across all three, the goal is not to turn every human action into money. It is to stop treating attention and participation as free raw material—and ask what it would look like for people to control where those things go and share in what they create.</p>
+    </section>
+
+    <section class="approach-section" id="approach" aria-labelledby="approach-title">
+      <div class="section-marker" aria-hidden="true">HORIZON / PROTOTYPE / PRESSURE TEST</div>
+      <div class="approach-copy">
+        <p class="eyebrow">How I work</p>
+        <h2 id="approach-title">Start with the horizon. Find the smallest piece that can become real.</h2>
+        <p>I’m drawn to questions that are too large for one feature or one release. The work is turning that ambition into a bounded experiment without losing the reason it mattered in the first place.</p>
+      </div>
+      <ol class="approach-steps">
+        <li><span>01</span><strong>Name the system question</strong><p>Who has agency, what behavior is rewarded, and where does the value go?</p></li>
+        <li><span>02</span><strong>Build one honest experiment</strong><p>Reduce the vision to a version that can exist, be used, and teach me something.</p></li>
+        <li><span>03</span><strong>Pressure-test the incentives</strong><p>Look for capture, exclusion, unintended control, and the gap between the idea and lived reality.</p></li>
+      </ol>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">About</p>
+      <div class="about-grid">
+        <h2 id="about-title">An ambitious systems thinker learning to make large ideas real.</h2>
+        <div>
+          <p>My path includes teaching, environmental organizing, restaurant management, marketing, and years of learning software by building things. It left me interested in the rules beneath our tools: what they make possible, what they reward, and how they shape the people inside them.</p>
+          <p>I keep returning to agency, consequences, participation, and shared value. Software gives me a way to turn those questions into systems people can inspect, challenge, and eventually use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Build toward something larger</p>
+      <h2 id="contact-title">Working on a problem bigger than a feature list?</h2>
+      <p>I’m interested in product-minded software, AI tooling, automation, developer tools, games, and teams willing to question how the underlying system should work.</p>
+      <div class="contact-links">
+        <a class="button button-primary" href="https://www.linkedin.com/in/jason-ziegler-4576523b/">Connect on LinkedIn</a>
+        <a class="button button-secondary" href="https://github.com/jasonmziegler">Explore GitHub</a>
+      </div>
+    </section>
   </main>
-  <footer>
-    <ul>
-      <li><a href="https://twitter.com/Jasonmziegler">Twitter</a></li>
-      <li><a href="https://www.linkedin.com/in/jason-ziegler-4576523b/">LinkedIn</a></li>
-      <li><a href="https://github.com/jasonmziegler/">Github</a></li>
-    </ul>
-    <p>Copyright 2021, Jason Ziegler</p>
-  </footer>
-</div>
+
+  <footer><span>Jason M. Ziegler</span><span>Ambitious horizons. Honest experiments. Systems people can question.</span></footer>
 </body>
 </html>
