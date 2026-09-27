@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Jason M. Ziegler turned an idea about consequential death into a persistent-world browser roguelike.">
+  <meta name="theme-color" content="#071014">
+  <title>Larn-like case study | Jason M. Ziegler</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23071014'/%3E%3Cpath d='M17 17h30v9H27v8h15v9H27v4H17V17Z' fill='%2358e6d9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#case-study">Skip to case study</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Jason M. Ziegler, home">
+      <span class="wordmark-mark" aria-hidden="true">JZ</span>
+      <span>Jason M. Ziegler</span>
+    </a>
+    <nav aria-label="Case study navigation">
+      <a href="index.html#work">All work</a>
+      <a href="#idea">Idea</a>
+      <a href="#system">System</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main id="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow">Larn-like · Working title · Case study</p>
+        <h1 id="case-title">What if dying made the world more alive?</h1>
+        <p class="hero-summary">Larn-like is a browser roguelike where a lost character does not simply disappear. The monster that killed them grows stronger, their equipment can change hands, and their death leaves resources and a shrine for whoever comes next.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#evidence">See the evidence</a>
+          <a class="button button-secondary" href="https://github.com/jasonmziegler/larn-like/tree/safety/desktop-state-2026-09-26">Review the source</a>
+        </div>
+      </div>
+      <aside class="case-facts" aria-label="Project facts">
+        <p><span>Status</span><strong>Playable local prototype</strong></p>
+        <p><span>Name</span><strong>Working title</strong></p>
+        <p><span>Stack</span><strong>TypeScript, Vite, Canvas, IndexedDB, Vitest</strong></p>
+        <p><span>My role</span><strong>Concept, system direction, requirements, review, testing</strong></p>
+        <p><span>Reviewed</span><strong>September 27, 2026</strong></p>
+      </aside>
+    </section>
+
+    <figure class="case-image">
+      <img src="assets/larn-like-town.png" alt="Larn-like town screen rendered in green terminal-style ASCII graphics, showing player statistics, a merchant, the dungeon entrance, and the player character.">
+      <figcaption>An actual development build of the town screen. The game uses a canvas renderer to recreate the feel of an old terminal roguelike.</figcaption>
+    </figure>
+
+    <section class="case-section case-origin" id="idea" aria-labelledby="idea-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The original idea</p>
+        <h2 id="idea-title">Make every attempt part of a world that remembers.</h2>
+      </div>
+      <div class="case-prose">
+        <p>This project is inspired by <cite>Larn</cite>, the 1986 roguelike created by Noah Morgan. I was drawn to its compact, arcade-like structure and began imagining how that kind of roguelike could move in a different direction. Larn-like is a working title for this independent experiment. It is not presented as an official sequel, port, or continuation of the original game.</p>
+        <p>The first version of my idea was closer to an arcade game. A player would pay a very small amount to begin a hero. Death would be permanent, but the time spent playing would continue to matter.</p>
+        <p>A killer monster could take the hero’s equipment, become stronger, and move deeper into the dungeon. Teeth left at the death site could become currency. A shrine could give a future hero another way to use what the previous character had built.</p>
+        <p>The larger goal was to explore whether a game could create value with its players instead of only extracting money or attention from them. The payment and player-owned economy remain a design horizon. They are not part of the current prototype and have not been validated.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="system" aria-labelledby="system-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The bounded experiment</p>
+        <h2 id="system-title">Build the consequence first.</h2>
+        <p>Before testing an economy, the game needed to prove that one player’s loss could create something meaningful for the next attempt.</p>
+      </div>
+      <ol class="system-flow" aria-label="Persistent death system">
+        <li><span>01</span><strong>A hero dies</strong><p>The game records who died, where it happened, and which monster delivered the final blow.</p></li>
+        <li><span>02</span><strong>The killer evolves</strong><p>The monster gains statistics, records the hero in its history, takes a trophy, and moves deeper.</p></li>
+        <li><span>03</span><strong>The world keeps the loss</strong><p>Teeth, equipment, the promoted monster, and a soul shrine are stored in IndexedDB.</p></li>
+        <li><span>04</span><strong>A new hero inherits it</strong><p>The next character starts fresh but enters a world changed by the heroes who came before.</p></li>
+      </ol>
+    </section>
+
+    <section class="case-section" aria-labelledby="built-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What exists now</p>
+        <h2 id="built-title">A working game loop around persistent consequences.</h2>
+      </div>
+      <div class="evidence-grid">
+        <article><span>01</span><h3>Playable foundation</h3><p>Procedural dungeon levels, a town and merchant, movement, turn-based combat, equipment, inventory, status effects, statistics, and achievements.</p></article>
+        <article><span>02</span><h3>Persistent world</h3><p>Generated levels, heroes, monsters, death events, teeth drops, shrines, and pending monster promotions are stored locally in a versioned IndexedDB database.</p></article>
+        <article><span>03</span><h3>Death as content</h3><p>Killer monsters evolve and carry history forward. Death sites leave currency and shrines that future heroes can use to bless equipment.</p></article>
+        <article><span>04</span><h3>Visible history</h3><p>The interface exposes evolved monsters, trophy equipment, world statistics, and the effects left behind by previous characters.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section verification-section" id="evidence" aria-labelledby="evidence-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">Current evidence</p>
+        <h2 id="evidence-title">Most of the system is covered. The repository is not clean yet.</h2>
+        <p>These results come from a fresh local review on September 27, 2026, not from the completion notes written while the features were being built.</p>
+      </div>
+      <div class="verification-grid">
+        <div class="metric metric-good"><strong>763</strong><span>tests passed</span></div>
+        <div class="metric metric-warning"><strong>1</strong><span>balance test failed</span></div>
+        <div class="metric metric-warning"><strong>4</strong><span>Supabase suites blocked by missing environment configuration</span></div>
+        <div class="metric metric-warning"><strong>2</strong><span>current TypeScript errors in the game entry point</span></div>
+      </div>
+      <div class="truth-note">
+        <h3>What that means</h3>
+        <p>The focused tests support claims about combat, equipment, persistence, monster promotion, death processing, teeth, shrines, blessings, dungeon levels, UI panels, and economic simulations. It would still be misleading to call the branch release-ready. The failing balance assertion, the Supabase-dependent suites, and the TypeScript errors need to be resolved before presenting a public build as complete.</p>
+      </div>
+    </section>
+
+    <section class="case-section collaboration-section" aria-labelledby="role-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">My role and AI assistance</p>
+        <h2 id="role-title">The idea and direction are mine. The implementation is collaborative.</h2>
+      </div>
+      <div class="case-prose">
+        <p>I developed the original concept, including paid attempts, permanent death, evolving monsters, teeth as currency, and the belief that a player’s contribution should remain valuable after a character is gone.</p>
+        <p>I used Claude and Codex extensively to turn that direction into requirements, architecture, code, tests, and debugging work. My role has been to explain the system I want, decide what belongs in it, review what the tools produce, identify when the result does not match the idea, and keep narrowing the vision into something that can be tested.</p>
+        <p>The next part of owning this project is not hiding that process. It is improving my understanding of the implementation, fixing the current failures, and being able to explain why the system works the way it does.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="next" aria-labelledby="next-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What comes next</p>
+        <h2 id="next-title">Turn a promising prototype into a game where playing creates value that lasts.</h2>
+        <p>The goal is not only to let players shape the world. It is to make the time, attention, and decisions they contribute matter beyond a single play session. A player’s actions could leave behind monsters, shrines, equipment, currency, and stories that other players can discover, use, trade, or build upon. The larger question is whether players can share in the value they help create instead of that value belonging entirely to the game or the company operating it.</p>
+      </div>
+      <ul class="next-list">
+        <li><span>01</span><p>Fix the TypeScript errors and the failing balance assertion.</p></li>
+        <li><span>02</span><p>Separate or configure the Supabase integration tests so the complete test result is reproducible.</p></li>
+        <li><span>03</span><p>Record a short demonstration of one hero dying and the next hero encountering what was left behind.</p></li>
+        <li><span>04</span><p>Use that playable loop to decide whether the original payment and player-value economy deserves another experiment.</p></li>
+      </ul>
+      <div class="case-closing">
+        <p>The most important result so far is not that the full vision is finished. It is that the central idea now exists as a system that can be played, inspected, criticized, and improved.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/jasonmziegler/larn-like/tree/safety/desktop-state-2026-09-26">Explore the repository</a>
+          <a class="button button-secondary" href="index.html#work">Return to selected work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Jason M. Ziegler</span><span>Ambitious horizons. Honest experiments. Systems people can question.</span></footer>
+</body>
+</html>

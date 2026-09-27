@@ -1,6 +1,6 @@
 # Jason M. Ziegler Portfolio Brief
 
-Status: working brief for review; not approved public copy
+Status: homepage published; case studies in progress
 
 Last updated: 2026-09-27
 
@@ -132,9 +132,13 @@ The homepage initially features Larn-like, Press S for Worker, and DoneQuest. Th
 
 **Story:** A browser roguelike with persistent-world systems, evolving consequences, and substantial TypeScript architecture.
 
+**Naming and attribution:** `Larn-like` is a working title for an independent experiment inspired by *Larn*, the 1986 roguelike created by Noah Morgan. Public copy should not present it as an official sequel, port, continuation, or endorsed project. Use "inspired by" rather than "built on" unless a future source-provenance audit establishes a derivative-code relationship. Choose a distinct name before commercialization.
+
 **Possible evidence:** gameplay screenshots or video, system explanation, test results, public source or reviewed safety branch.
 
-**Required verification before publication:** decide which branch represents the portfolio version and clearly distinguish passing tests from the remaining Supabase-dependent and TypeScript issues.
+**Current case-study evidence:** the first local case-study page uses an inspected gameplay screenshot and the reviewed `safety/desktop-state-2026-09-26` branch. A fresh run on 2026-09-27 produced 763 passing tests, one failing economic-balance assertion, four Supabase suites blocked by missing environment configuration, and two TypeScript errors in `main.ts`. The page also documents Jason's original concept and direction alongside extensive Claude and Codex assistance with requirements, implementation, tests, and debugging.
+
+**Required verification before publication:** fix or explicitly retain the current technical limitations, confirm the reviewed source branch remains public, and obtain Jason's content approval. A recorded death-to-next-hero gameplay demonstration remains the strongest next piece of evidence. Before distributing or monetizing the game, audit code and content provenance, document licensing, and review the permanent product name.
 
 ### 5. Little Ecosystem
 
