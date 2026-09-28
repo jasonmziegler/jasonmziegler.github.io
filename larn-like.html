@@ -93,20 +93,38 @@
 
     <section class="case-section verification-section" id="evidence" aria-labelledby="evidence-title">
       <div class="case-section-heading">
-        <p class="eyebrow">Current evidence</p>
-        <h2 id="evidence-title">Most of the system is covered. The repository is not clean yet.</h2>
-        <p>These results come from a fresh local review on September 27, 2026, not from the completion notes written while the features were being built.</p>
+        <p class="eyebrow">What the prototype proves today</p>
+        <h2 id="evidence-title">One death can become part of another player’s world.</h2>
+        <p>The current prototype does not prove the larger player economy yet. It does demonstrate the central mechanism that makes that idea worth exploring.</p>
       </div>
-      <div class="verification-grid">
-        <div class="metric metric-good"><strong>763</strong><span>tests passed</span></div>
-        <div class="metric metric-warning"><strong>1</strong><span>balance test failed</span></div>
-        <div class="metric metric-warning"><strong>4</strong><span>Supabase suites blocked by missing environment configuration</span></div>
-        <div class="metric metric-warning"><strong>2</strong><span>current TypeScript errors in the game entry point</span></div>
+      <div class="proof-grid">
+        <article><span>01</span><h3>The world remembers</h3><p>A hero’s death becomes a persistent world event instead of disappearing when the run ends.</p></article>
+        <article><span>02</span><h3>The killer carries history</h3><p>The monster evolves, records the fallen hero, takes a trophy, and moves deeper into the dungeon.</p></article>
+        <article><span>03</span><h3>Loss becomes opportunity</h3><p>Teeth, equipment, and a soul shrine give future heroes something to discover and use.</p></article>
+        <article><span>04</span><h3>The next hero inherits the consequences</h3><p>A new character begins from scratch but enters a world shaped by previous attempts.</p></article>
       </div>
-      <div class="truth-note">
-        <h3>What that means</h3>
-        <p>The focused tests support claims about combat, equipment, persistence, monster promotion, death processing, teeth, shrines, blessings, dungeon levels, UI panels, and economic simulations. It would still be misleading to call the branch release-ready. The failing balance assertion, the Supabase-dependent suites, and the TypeScript errors need to be resolved before presenting a public build as complete.</p>
+      <div class="technical-note">
+        <div>
+          <p class="eyebrow">Supporting technical verification</p>
+          <h3>The local baseline is reproducible.</h3>
+        </div>
+        <p>The latest local review compiled the TypeScript projects, completed the production build, and passed 764 local tests. Supabase-connected behavior remains a separate opt-in suite and was not reverified because dedicated test credentials were unavailable. These checks support the implementation. The next proof is a recorded end-to-end playthrough.</p>
       </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="process-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">How the idea is being tested</p>
+        <h2 id="process-title">Keep the horizon. Test one assumption at a time.</h2>
+        <p>The project moves forward by turning the largest claim into a smaller question that can be built, observed, and challenged.</p>
+      </div>
+      <ol class="experiment-path">
+        <li><span>01 · Horizon</span><strong>Playing should create lasting value that players can share in.</strong></li>
+        <li><span>02 · Hypothesis</span><strong>A character’s death can create meaningful content for future players.</strong></li>
+        <li><span>03 · Experiment</span><strong>Persist the killer, equipment, teeth, shrine, and death history across heroes.</strong></li>
+        <li><span>04 · Current result</span><strong>The consequence system exists. A shared player economy has not been validated.</strong></li>
+        <li><span>05 · Next question</span><strong>Do players find what previous heroes leave behind meaningful enough to build upon?</strong></li>
+      </ol>
     </section>
 
     <section class="case-section collaboration-section" aria-labelledby="role-title">
@@ -128,10 +146,10 @@
         <p>The goal is not only to let players shape the world. It is to make the time, attention, and decisions they contribute matter beyond a single play session. A player’s actions could leave behind monsters, shrines, equipment, currency, and stories that other players can discover, use, trade, or build upon. The larger question is whether players can share in the value they help create instead of that value belonging entirely to the game or the company operating it.</p>
       </div>
       <ul class="next-list">
-        <li><span>01</span><p>Fix the TypeScript errors and the failing balance assertion.</p></li>
-        <li><span>02</span><p>Separate or configure the Supabase integration tests so the complete test result is reproducible.</p></li>
-        <li><span>03</span><p>Record a short demonstration of one hero dying and the next hero encountering what was left behind.</p></li>
-        <li><span>04</span><p>Use that playable loop to decide whether the original payment and player-value economy deserves another experiment.</p></li>
+        <li><span>01</span><p>Record one hero dying and the next hero encountering the monster, equipment, teeth, and shrine left behind.</p></li>
+        <li><span>02</span><p>Put that loop in front of players and observe whether inheriting another hero’s consequences feels meaningful.</p></li>
+        <li><span>03</span><p>Test whether the persistent world still works when those consequences move between different players instead of local characters.</p></li>
+        <li><span>04</span><p>Use what players actually value to decide whether the payment and player-owned economy deserves another experiment.</p></li>
       </ul>
       <div class="case-closing">
         <p>The most important result so far is not that the full vision is finished. It is that the central idea now exists as a system that can be played, inspected, criticized, and improved.</p>
