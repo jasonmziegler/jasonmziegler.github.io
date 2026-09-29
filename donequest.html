@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Jason M. Ziegler built DoneQuest to turn ambitious goals into manageable daily actions while preserving momentum and user control.">
+  <meta name="theme-color" content="#071014">
+  <title>DoneQuest case study | Jason M. Ziegler</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23071014'/%3E%3Cpath d='M17 17h30v9H27v8h15v9H27v4H17V17Z' fill='%2358e6d9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#case-study">Skip to case study</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Jason M. Ziegler, home">
+      <span class="wordmark-mark" aria-hidden="true">JZ</span>
+      <span>Jason M. Ziegler</span>
+    </a>
+    <nav aria-label="Case study navigation">
+      <a href="index.html#work">All work</a>
+      <a href="#idea">Idea</a>
+      <a href="#system">System</a>
+      <a href="#findings">Findings</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main id="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow">DoneQuest · Deployed web application</p>
+        <h1 id="case-title">What if progress felt easier to return to?</h1>
+        <p class="hero-summary">DoneQuest turns ambitious goals into a small number of manageable daily actions. It is built around five-minute starts, visible progress, and the belief that missing a day should not erase what a person has already accomplished.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://goals.jasonmziegler.tech">Visit DoneQuest</a>
+          <a class="button button-secondary" href="https://github.com/jasonmziegler/donequest">View source</a>
+        </div>
+      </div>
+      <aside class="case-facts" aria-label="Project facts">
+        <p><span>Status</span><strong>Deployed, invite-only application</strong></p>
+        <p><span>Stack</span><strong>PHP, MySQL, JavaScript, GitHub Actions</strong></p>
+        <p><span>Runs on</span><strong>Bluehost, phone and desktop web</strong></p>
+        <p><span>My role</span><strong>Product concept, interaction design, system direction, implementation review</strong></p>
+        <p><span>Live version verified</span><strong>September 29, 2026</strong></p>
+      </aside>
+    </section>
+
+    <figure class="case-image">
+      <img src="assets/donequest-dashboard.png" alt="The signed-in DoneQuest dashboard showing two daily quests, a 45-minute budget, five-minute start buttons, progress level, momentum language, and online save status.">
+      <figcaption>The deployed dashboard turns a 45-minute daily budget into two concrete next actions while keeping progress, momentum, and save status visible.</figcaption>
+    </figure>
+
+    <section class="case-section case-origin" id="idea" aria-labelledby="idea-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The product idea</p>
+        <h2 id="idea-title">A large goal becomes useful when it can answer, “What can I do now?”</h2>
+      </div>
+      <div class="case-prose">
+        <p>Ambitious goals matter to me, but a goal like “build the system,” “repair the house,” or “find a new job” does not tell me what to do with the next thirty minutes. Conventional task lists can preserve the ambition while still leaving the starting problem unsolved.</p>
+        <p>DoneQuest explores a more practical relationship between the horizon and the day in front of you. A goal becomes an ordered plan of short actions. The planner chooses a small number that fit the time available, and five minutes counts as a legitimate beginning.</p>
+        <p>The system is intentionally forgiving. Unfinished work remains available. A missed day does not reset a streak to zero. A “Where I left off” note preserves the thought that will make returning easier.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="system" aria-labelledby="system-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The experience</p>
+        <h2 id="system-title">Narrow the decision. Make starting count. Preserve the return path.</h2>
+        <p>The planner turns a large intention into a repeatable loop that can survive uneven time, energy, and attention.</p>
+      </div>
+      <ol class="system-flow" aria-label="DoneQuest planning loop">
+        <li><span>01</span><strong>Break it down</strong><p>A goal becomes a sequence of concrete steps with expected session lengths and room to split anything still too large.</p></li>
+        <li><span>02</span><strong>Choose today</strong><p>DoneQuest shows up to three next quests that fit the available time instead of presenting the entire backlog.</p></li>
+        <li><span>03</span><strong>Begin for five minutes</strong><p>A lightweight focus timer lowers the commitment from finishing the task to simply getting started.</p></li>
+        <li><span>04</span><strong>Carry momentum forward</strong><p>Progress, rewards, unfinished work, and private resume notes make the next session easier to enter.</p></li>
+      </ol>
+    </section>
+
+    <section class="case-section" aria-labelledby="built-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What was implemented</p>
+        <h2 id="built-title">A complete planning system, not only a task list.</h2>
+      </div>
+      <div class="evidence-grid">
+        <article><span>01</span><h3>Daily planning</h3><p>Create and organize goals, set a daily time budget, split oversized steps, defer work until tomorrow, and focus on a small set of next actions.</p></article>
+        <article><span>02</span><h3>Visible momentum</h3><p>XP, levels, ranks, badges, coins, personal rewards, progress bars, and “days showing up” make accumulated effort easier to see.</p></article>
+        <article><span>03</span><h3>Private continuity</h3><p>Invite-only accounts, account-separated plans, server persistence, optimistic revisions, conflict recovery, resume notes, and portable JSON backups support use across devices.</p></article>
+        <article><span>04</span><h3>Controlled delivery</h3><p>A manually triggered deployment workflow runs checks, restricts uploaded files, verifies the public version and health response, and preserves a recovery path.</p></article>
+      </div>
+      <div class="proof-sequence" aria-labelledby="inside-title">
+        <div class="proof-sequence-heading">
+          <p class="eyebrow">Inside the deployed product</p>
+          <h3 id="inside-title">The plan connects today’s effort to the larger ambition.</h3>
+          <p>These views use my current goals with my permission. No passwords, tokens, invitation links, provider keys, notes, or account identifiers are shown.</p>
+        </div>
+        <div class="proof-sequence-grid">
+          <figure>
+            <a href="assets/donequest-dashboard.png" target="_blank" rel="noopener" aria-label="Open the full-size DoneQuest dashboard screenshot">
+              <img src="assets/donequest-dashboard.png" loading="lazy" alt="DoneQuest dashboard showing a 45-minute daily budget, two next quests, five-minute start controls, and visible momentum and progress panels.">
+            </a>
+            <figcaption><span>01 · Make today manageable</span>The daily view selects concrete work from different goals, fits it to the available time, and makes a five-minute start immediately available.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/donequest-goal-breakdown.png" target="_blank" rel="noopener" aria-label="Open the full-size DoneQuest goal breakdown screenshot">
+              <img src="assets/donequest-goal-breakdown.png" loading="lazy" alt="An expanded DoneQuest aquaponics goal broken into ordered 45-minute actions with controls to add notes or split a step.">
+            </a>
+            <figcaption><span>02 · Keep the ambition intact</span>The full aquaponics goal remains visible as an ordered plan of short sessions, with each step available for notes or further splitting.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section verification-section" id="findings" aria-labelledby="findings-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What building it revealed</p>
+        <h2 id="findings-title">Supporting progress means designing for interruption.</h2>
+        <p>The important discoveries were less about adding more motivation and more about reducing the cost of beginning again.</p>
+      </div>
+      <div class="proof-grid">
+        <article><span>01</span><h3>The next action matters more than the full list</h3><p>A meaningful goal can still be paralyzing. Time budgets and a limited daily view turn ambition into a decision that can be made now.</p></article>
+        <article><span>02</span><h3>Carry-forward should preserve dignity</h3><p>Unfinished work is not failure. Keeping progress and context intact makes returning more useful than punishing a broken streak.</p></article>
+        <article><span>03</span><h3>Sync needs an acknowledged source of truth</h3><p>Moving from browser storage to authenticated server persistence required revisions, conflict handling, visible save state, and recovery choices.</p></article>
+        <article><span>04</span><h3>Users need an escape hatch</h3><p>When a save fails, dirty state remains available and the user can retry, load the server version, or export a backup rather than silently losing work.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section case-origin" aria-labelledby="ai-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">AI without surrendering control</p>
+        <h2 id="ai-title">Give the assistant less authority than the person.</h2>
+      </div>
+      <div class="case-prose">
+        <p>The deployed AI connection layer is intentionally smaller than the human interface. A user can create a private, expiring connection that reads their plan or, with stronger permission, adds a goal or tasks.</p>
+        <p>The AI cannot delete work, mark tasks complete, reopen them, spend rewards, administer accounts, or replace the entire plan. Additive writes require the current plan revision and an idempotency key, protecting both user intent and uncertain retries.</p>
+        <p>A separate text-inbox experiment goes further: capture a thought, let AI propose a structured change, inspect the exact result, then Apply or Dismiss it. That workflow and its account-owned provider credentials remain a tested draft, not a live feature.</p>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="evidence-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What the evidence supports today</p>
+        <h2 id="evidence-title">The application is live. Its private behavior remains private.</h2>
+        <p>The public deployment marker matched repository <code>main</code>, and the checks and deployment run for that version succeeded. A signed-in review confirmed the current dashboard, daily planning, goal breakdown, rewards, milestones, backup controls, and online save status without changing any goal data.</p>
+      </div>
+      <div class="architecture-band" aria-label="DoneQuest evidence summary">
+        <p><span>Live application</span>The public site serves the deployed planner, account, backup, progress, notes, and AI-connection code.</p>
+        <p><span>Current checks</span>Fresh isolated JavaScript and Python checks passed; the full GitHub Actions run for the live version also passed.</p>
+        <p><span>Honest boundary</span>Production writes, cross-device behavior, MySQL concurrency, backup restoration, and AI activation were not exercised during this review.</p>
+      </div>
+      <div class="technical-note">
+        <div>
+          <p class="eyebrow">Deployed and draft are different claims</p>
+          <h3>The reviewed Goals Inbox is not presented as live.</h3>
+        </div>
+        <p>The capture, proposal, exact review, and Apply or Dismiss workflow passed synthetic checks on a draft branch. It has not been merged or deployed, so it appears here as a product experiment rather than an available feature.</p>
+      </div>
+    </section>
+
+    <section class="case-section collaboration-section" aria-labelledby="role-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">My role and AI assistance</p>
+        <h2 id="role-title">I shaped the behavior I wanted the system to encourage.</h2>
+      </div>
+      <div class="case-prose">
+        <p>I defined the product problem, the planning and reward loops, the boundaries around AI authority, and the experience I wanted when someone missed a day or returned to difficult work.</p>
+        <p>I used AI coding tools extensively to help turn those decisions into application code, tests, deployment workflows, and documentation. My work has been to direct the system, challenge outputs that did not match the intent, and keep the product grounded in user agency rather than feature volume.</p>
+        <p>The result combines product design, full-stack implementation, multi-user boundaries, deployment engineering, and an evolving understanding of how AI can assist without quietly becoming the decision-maker.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="next" aria-labelledby="next-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What comes next</p>
+        <h2 id="next-title">Verify the private experience with synthetic data before expanding it.</h2>
+        <p>The next milestone is not another feature. It is a repeatable, privacy-safe walkthrough of the exact deployed version using a synthetic account and goals.</p>
+      </div>
+      <ul class="next-list">
+        <li><span>01</span><p>Verify sign-in, isolation, save and reload, stale-revision recovery, notes, backups, and invitation behavior against a synthetic environment.</p></li>
+        <li><span>02</span><p>Confirm the experience across phone and desktop without exposing a real account or personal goals.</p></li>
+        <li><span>03</span><p>If AI connections are active, prove one least-privilege read using a temporary synthetic account and revoke the connection afterward.</p></li>
+        <li><span>04</span><p>Capture a synthetic screenshot set, then decide whether the reviewed text inbox is ready for a separately backed-up release.</p></li>
+      </ul>
+      <div class="case-closing">
+        <p>DoneQuest is an attempt to make ambitious work feel more possible without pretending life will become perfectly consistent. The product succeeds when it helps someone find a useful next step and makes returning feel worthwhile.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://goals.jasonmziegler.tech">Visit DoneQuest</a>
+          <a class="button button-secondary" href="index.html#work">Return to selected work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Jason M. Ziegler</span><span>Ambitious horizons. Honest experiments. Systems people can question.</span></footer>
+</body>
+</html>

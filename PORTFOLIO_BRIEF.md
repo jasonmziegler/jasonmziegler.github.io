@@ -33,7 +33,7 @@ The shorter public expression is:
 | `Attention` | Can people deliberately direct attention instead of surrendering it to an engagement feed? | Account/authentication prototype and roadmap for one movable, reclaimable Span token plus top people/topics | Delegated attention flow and world visualization were planned, not implemented |
 | `Larn-like` | Can participation remain valuable after a player character is gone? | Persistent-world architecture, consequential death, evolving monsters, death sites, and substantial tests | The original player economy remains a design horizon, not a proven live economy |
 | `west.net` | Can attention fund creators and communities without advertising or invisible behavioral extraction? | Detailed MVP, full-vision PRD, micropayment research, and 21 adversarial system tests | Research and planning project; no public product has been validated |
-| `DoneQuest` | Can AI help shape a person's goals without taking control of the decision? | Capture, proposal, review, and explicit apply workflow with account-scoped credentials | Production deployment and current live features require re-verification |
+| `DoneQuest` | How can a large intention become a manageable next action without punishing interruption? | Daily quests, five-minute starts, forgiving carry-forward, and least-authority AI access | Deployed code verified; private authenticated behavior still requires synthetic testing |
 | `Press S for Worker` | Can coding-agent behavior remain local, inspectable, and controlled by its operator? | Tool loop, memory, model switching, dashboard, and focused reliability tests | Portfolio branch and current demo path still need selection and verification |
 | `Grasp of Eternity` | Can many interacting game systems create consequences that feel coherent? | Surface-aware movement, combat, progression, audio iteration, and runtime test discipline | Current gameplay and build state require Unity review before public claims |
 | `Little Ecosystem` | Can experimentation make a living system easier to understand? | Aquaponics simulation with persisted experiments and farm layouts | Current Godot runtime and visuals still need re-verification |
@@ -128,7 +128,9 @@ The homepage initially features Larn-like, Press S for Worker, and DoneQuest. Th
 
 **Possible evidence:** sanitized product screenshots, capture-to-review workflow, data-boundary diagram, live link if reverified.
 
-**Required verification before publication:** recheck the live deployment, database migration state, account isolation, and which features are actually available in production.
+**Current case-study evidence:** the public deployment marker matched repository `main` at commit `03095f2`, with successful checks and deployment history. The deployed code includes the core planner, five-minute timer, progress and rewards, private notes, backups, invitations, account-separated persistence, and scoped AI connections. An authorized signed-in review confirmed the current dashboard, daily planning, goal breakdown, rewards, milestones, backup controls, and online save status without changing goal data. Portfolio screenshots show Jason's goals with his explicit approval while excluding passwords, tokens, invitation links, provider keys, notes, and account identifiers. Production writes, cross-device behavior, MySQL concurrency, backup restoration, and AI activation remain verification boundaries. The reviewed Goals Inbox and per-user provider credentials are explicitly described as a tested draft rather than a deployed feature.
+
+**Required verification before publication:** retain the distinction between deployed code and freshly exercised authenticated behavior. Never publish real goals, account details, invitation links, tokens, provider keys, backups, or private production data. The next evidence milestone should use a synthetic account and synthetic goals.
 
 ### 4. Larn-like
 
