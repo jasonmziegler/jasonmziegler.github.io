@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Press S for Worker explores what a personal AI worker could become when it runs locally, remembers useful work, builds tools, and remains visible to its operator.">
+  <meta name="theme-color" content="#071014">
+  <title>Press S for Worker case study | Jason M. Ziegler</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23071014'/%3E%3Cpath d='M17 17h30v9H27v8h15v9H27v4H17V17Z' fill='%2358e6d9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#case-study">Skip to case study</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Jason M. Ziegler, home">
+      <span class="wordmark-mark" aria-hidden="true">JZ</span>
+      <span>Jason M. Ziegler</span>
+    </a>
+    <nav aria-label="Case study navigation">
+      <a href="index.html#work">All work</a>
+      <a href="#idea">Idea</a>
+      <a href="#system">System</a>
+      <a href="#findings">Findings</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main id="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow">Press S for Worker · Local-first agent experiment</p>
+        <h1 id="case-title">What if your AI worker could grow with you?</h1>
+        <p class="hero-summary">Press S for Worker explores a personal AI worker that runs on hardware you control, remembers useful work, develops tools, and lets you see what it is doing. The project asks what it would take for that worker to become more capable over time without becoming opaque or unaccountable.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#system">Explore the system</a>
+          <a class="button button-secondary" href="https://github.com/jasonmziegler/press-s-for-worker/tree/safety/desktop-state-2026-09-26">View current source</a>
+        </div>
+      </div>
+      <aside class="case-facts" aria-label="Project facts">
+        <p><span>Status</span><strong>Working local agent system</strong></p>
+        <p><span>Exploration</span><strong>Personal AI labor under user control</strong></p>
+        <p><span>Stack</span><strong>Python, Flask, SQLite, LM Studio</strong></p>
+        <p><span>Runs on</span><strong>Local hardware</strong></p>
+        <p><span>My role</span><strong>Concept, experiments, system direction, review</strong></p>
+      </aside>
+    </section>
+
+    <figure class="case-image">
+      <img src="assets/press-s-dashboard.png" alt="Press S for Worker dashboard showing local-model selection, context controls, queue status, task entry, and recent task history.">
+      <figcaption>One place to choose the local model, assign work, watch tasks move through the queue, and inspect the memories and tools the worker accumulates.</figcaption>
+    </figure>
+
+    <section class="case-section case-origin" id="idea" aria-labelledby="idea-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The concept</p>
+        <h2 id="idea-title">Build a worker that compounds capability instead of resetting every session.</h2>
+      </div>
+      <div class="case-prose">
+        <p>Most AI assistants feel temporary. You open a session, explain the context again, and rely on a service whose internal work you cannot really see. I wanted to explore a different relationship: a worker on my own computer that could retain useful knowledge, reuse tools, and become better suited to the way I work.</p>
+        <p>The name comes from StarCraft. Pressing S creates another worker, and a strong economy grows one worker at a time. I treated the roadmap like a build order, adding memory, tools, task management, and model controls as distinct capabilities instead of declaring a large autonomous system at the start.</p>
+        <p>That made this both an application and an experiment. Every task was a chance to ask what the worker could do, where it failed, and what the surrounding system needed to make the next attempt more dependable.</p>
+      </div>
+    </section>
+
+    <section class="case-section case-origin" aria-labelledby="importance-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">Why it matters</p>
+        <h2 id="importance-title">The person running the agent should be able to shape it.</h2>
+      </div>
+      <div class="case-prose">
+        <p>A personal AI worker could hold onto the context of long-running projects, perform repetitive work, and develop reusable capabilities instead of starting over each time. Running locally also creates the possibility of choosing the model and deciding where the work and its history live.</p>
+        <p>But control is not the same thing as simply putting a model on a local computer. The operator needs to see what was requested, which tools were used, what changed, what was remembered, and why the system believes a task is finished.</p>
+        <p>Press S for Worker explores that missing layer between a capable model and a useful collaborator: the visible system of tasks, memory, tools, boundaries, and evidence that gives a person meaningful oversight.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="system" aria-labelledby="system-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What was implemented</p>
+        <h2 id="system-title">The worker can remember, act, and extend itself.</h2>
+        <p>The prototype brings the basic parts of a persistent worker into one system. A task can survive a restart, draw on prior context, call a bounded set of tools, create new reusable functions, and return its work for review.</p>
+      </div>
+      <ol class="system-flow" aria-label="Press S task flow">
+        <li><span>01</span><strong>Assign work</strong><p>The dashboard adds a task to a persistent queue and keeps its status visible through completion or failure.</p></li>
+        <li><span>02</span><strong>Recall context</strong><p>The worker retrieves related memories and combines them with the task and the tools currently available.</p></li>
+        <li><span>03</span><strong>Use or build tools</strong><p>A bounded tool loop can read, write, inspect, and register generated Python functions for later work.</p></li>
+        <li><span>04</span><strong>Report back</strong><p>Results, task history, memories, tools, and model settings return to a dashboard the operator can inspect.</p></li>
+      </ol>
+      <div class="architecture-band" aria-label="Supporting systems">
+        <p><span>Queue + Worker</span>SQLite state and a polling process keep work moving and recover tasks interrupted by a restart.</p>
+        <p><span>Vault + Forge</span>Local embeddings retrieve memories, while generated functions can become reusable tools.</p>
+        <p><span>Cortex + Model control</span>A bounded action loop mediates tool calls while file locks coordinate model changes.</p>
+      </div>
+    </section>
+
+    <section class="case-section verification-section" id="findings" aria-labelledby="findings-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What building it revealed</p>
+        <h2 id="findings-title">Reliability lives around the model.</h2>
+        <p>The most useful discoveries did not come from a perfect demonstration. They came from watching the system produce plausible work that was incomplete, damaged, or incorrectly marked as finished.</p>
+      </div>
+      <div class="evidence-grid failure-grid">
+        <article><span>01</span><h3>Local does not mean contained</h3><p>Running the model on my computer gives me control over the hardware and model choice, but tools still need explicit workspace boundaries. Otherwise a local worker can alter the wrong file just as easily as a remote one.</p></article>
+        <article><span>02</span><h3>Output does not mean completion</h3><p>A Hangman task produced a page that referenced images it never created. The artifact existed, but the experience did not work. Completion has to include checks of the result, not just evidence that something was written.</p></article>
+        <article><span>03</span><h3>Memory can preserve mistakes</h3><p>One task returned its intended action as reasoning rather than a tool call. The system accepted an empty answer and stored an inaccurate memory. Persistent memory is valuable only when the event being remembered was verified.</p></article>
+        <article><span>04</span><h3>Decomposition is not orchestration</h3><p>A parent task can create child tasks, but it does not yet wait for them, combine their results, or fail when they fail. Breaking work apart is only the beginning of coordinating it.</p></article>
+      </div>
+      <div class="technical-note">
+        <div>
+          <p class="eyebrow">A finding that changed the roadmap</p>
+          <h3>A responding model is not necessarily a ready worker.</h3>
+        </div>
+        <p>A live request reached the loaded local model, but the response contained reasoning without a usable answer and ended because it reached its length limit. The existing readiness check would still accept it. That turned an abstract concern into a concrete requirement: the system must recognize incomplete responses and judge completion from the work produced.</p>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="working-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What exists today</p>
+        <h2 id="working-title">The foundation works. The full promise is still being built.</h2>
+        <p>Individual parts have been exercised in isolation so the next experiment starts from known behavior rather than assumptions.</p>
+      </div>
+      <div class="proof-grid">
+        <article><span>01</span><h3>Persistent task state</h3><p>The queue moves tasks through pending, running, done, and failed states, recovers interrupted work, and records parent-child relationships.</p></article>
+        <article><span>02</span><h3>Bounded tool use</h3><p>The worker can call registered file tools through a limited action loop and return those results to the model.</p></article>
+        <article><span>03</span><h3>Local semantic memory</h3><p>A locally loaded embedding model can turn text into vectors used to retrieve related memories for later tasks.</p></article>
+        <article><span>04</span><h3>Visible operator controls</h3><p>The dashboard exposes the queue, task history, model choice, context mode, memories, and available tools in one place.</p></article>
+      </div>
+      <div class="technical-note">
+        <div>
+          <p class="eyebrow">Current boundary</p>
+          <h3>These pieces do not yet prove a dependable end-to-end worker.</h3>
+        </div>
+        <p>The queue, direct tools, Python and JavaScript syntax, and local embedding path have current evidence behind them. The complete dashboard and worker test suite still needs a reproducible dependency environment, and the incomplete live model response shows why success criteria need to become stricter.</p>
+      </div>
+    </section>
+
+    <section class="case-section collaboration-section" aria-labelledby="role-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">My role and AI assistance</p>
+        <h2 id="role-title">I used the worker to study the worker.</h2>
+      </div>
+      <div class="case-prose">
+        <p>I chose the build order, defined tasks for the local worker, reviewed what it produced, and used failures to decide what the surrounding system needed next.</p>
+        <p>Local models and AI coding tools contributed code and proposed solutions. My responsibility was to decide whether those outputs matched the intent, distinguish apparent completion from working behavior, and turn each failure into a more precise requirement.</p>
+        <p>The project changed my view of agent development. A stronger model may improve the answer, but the queue, boundaries, verification rules, and recovery behavior determine whether that answer becomes dependable work.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="next" aria-labelledby="next-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What comes next</p>
+        <h2 id="next-title">Make one worker dependable before creating more.</h2>
+        <p>The next milestone is intentionally smaller than another channel, tool, or planning feature. One synthetic coding task should run inside a bounded workspace, produce an artifact, verify it, and report failure accurately when the evidence is broken.</p>
+      </div>
+      <ul class="next-list">
+        <li><span>01</span><p>Add checked-in dependencies and a clean-environment test command.</p></li>
+        <li><span>02</span><p>Give each task an isolated workspace and reject absolute paths and traversal.</p></li>
+        <li><span>03</span><p>Make queue claiming atomic and return the actual post-claim state.</p></li>
+        <li><span>04</span><p>Treat empty, truncated, exhausted, and HTTP-error responses as explicitly incomplete.</p></li>
+        <li><span>05</span><p>Require artifacts, commands, exit codes, checks, and model identity before success.</p></li>
+      </ul>
+      <div class="case-closing">
+        <p>Press S for Worker is becoming a practical test of a larger idea: personal AI labor can be useful, cumulative, and under the operator’s control, but only when the system makes its work visible and proves what it actually accomplished.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/jasonmziegler/press-s-for-worker/tree/safety/desktop-state-2026-09-26">Explore the current source</a>
+          <a class="button button-secondary" href="index.html#work">Return to selected work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Jason M. Ziegler</p>
+    <p>Ambitious horizons. Honest experiments. Systems people can question.</p>
+  </footer>
+</body>
+</html>

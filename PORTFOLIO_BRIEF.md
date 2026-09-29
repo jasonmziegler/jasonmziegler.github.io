@@ -110,7 +110,9 @@ The homepage initially features Larn-like, Press S for Worker, and DoneQuest. Th
 
 **Possible evidence:** architecture diagram, dashboard screenshot, focused test results, short recorded workflow, public repository.
 
-**Required verification before publication:** choose the branch or commit to present and confirm the demo path works on this desktop.
+**Current case-study evidence:** a September 29 audit of `safety/desktop-state-2026-09-26` verified the synthetic SQLite queue lifecycle, direct tool smoke behavior, source and JavaScript syntax, and one live 768-dimensional embedding response without opening the private runtime databases. A current dashboard screenshot shows the operator interface and is explicitly presented as interface evidence rather than proof of end-to-end execution. The full dashboard and worker test path remains blocked in the audited Python environment by missing Flask and Requests. A live chat probe returned empty, reasoning-only output with `finish_reason: length`, exposing that the current readiness check can accept an incomplete response. The case study uses that result and earlier failures to explain why containment, explicit incomplete states, and executable evidence are the next milestone.
+
+**Required verification before publication:** confirm the safety branch is publicly accessible, retain the distinction between code-supported behavior and current runtime verification, and obtain Jason's content approval. Do not publish private database contents or present the dashboard screenshot as a successful complete agent run.
 
 ### 2. Grasp of Eternity
 
