@@ -42,7 +42,7 @@
         <p><span>Name</span><strong>Working title</strong></p>
         <p><span>Stack</span><strong>TypeScript, Vite, Canvas, IndexedDB, Vitest</strong></p>
         <p><span>My role</span><strong>Concept, system direction, requirements, review, testing</strong></p>
-        <p><span>Reviewed</span><strong>September 27, 2026</strong></p>
+        <p><span>Reviewed</span><strong>September 28, 2026</strong></p>
       </aside>
     </section>
 
@@ -103,12 +103,45 @@
         <article><span>03</span><h3>Loss becomes opportunity</h3><p>Teeth, equipment, and a soul shrine give future heroes something to discover and use.</p></article>
         <article><span>04</span><h3>The next hero inherits the consequences</h3><p>A new character begins from scratch but enters a world shaped by previous attempts.</p></article>
       </div>
+      <div class="proof-sequence" aria-labelledby="walkthrough-title">
+        <div class="proof-sequence-heading">
+          <p class="eyebrow">Verified walkthrough · local production build</p>
+          <h3 id="walkthrough-title">Mara dies. Iris inherits the consequences.</h3>
+          <p>This sequence follows one controlled run through the real persistence systems. Query-gated demonstration controls made the scenario reproducible; they are verification tools, not finished player-facing controls.</p>
+        </div>
+        <div class="proof-sequence-grid">
+          <figure>
+            <a href="assets/persistent-consequence-death.png" target="_blank" rel="noopener" aria-label="Open the full-size death and world-mutation screenshot">
+              <img src="assets/persistent-consequence-death.png" loading="lazy" alt="Death screen showing Mara slain by a Goblin, the Goblin promoted with stronger statistics, seventeen teeth scattered, Mara's dagger claimed, and a soul shrine created.">
+            </a>
+            <figcaption><span>01 · Death changes the world</span>A Goblin kills Mara, grows stronger, takes her dagger, and leaves teeth and a soul shrine behind.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/persistent-consequence-legacy-site.png" target="_blank" rel="noopener" aria-label="Open the full-size legacy-site screenshot">
+              <img src="assets/persistent-consequence-legacy-site.png" loading="lazy" alt="Iris standing beside a combined legacy marker identifying seventeen teeth and Mara's soul shrine on the persisted death tile.">
+            </a>
+            <figcaption><span>02 · A successor finds the site</span>Iris returns to the same Level 1 location and finds both of Mara’s consequences still there.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/persistent-consequence-shrine-interaction.png" target="_blank" rel="noopener" aria-label="Open the full-size shrine-interaction screenshot">
+              <img src="assets/persistent-consequence-shrine-interaction.png" loading="lazy" alt="Mara's Shrine interaction panel showing twenty-two soul energy and blessing choices for Iris's equipment.">
+            </a>
+            <figcaption><span>03 · The legacy is usable</span>Mara’s shrine holds soul energy that Iris can use to attempt to bless her equipment.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/persistent-consequence-killer.png" target="_blank" rel="noopener" aria-label="Open the full-size evolved-killer screenshot">
+              <img src="assets/persistent-consequence-killer.png" loading="lazy" alt="Inspection panel for the Goblin Slayer of Mara showing evolved statistics, Mara's dagger as its equipped trophy, and Mara in its kill history.">
+            </a>
+            <figcaption><span>04 · The killer carries history</span>On Level 2, Iris finds the evolved Goblin carrying Mara’s dagger with the kill recorded in its history.</figcaption>
+          </figure>
+        </div>
+      </div>
       <div class="technical-note">
         <div>
           <p class="eyebrow">Supporting technical verification</p>
           <h3>The local baseline is reproducible.</h3>
         </div>
-        <p>The latest local review compiled the TypeScript projects, completed the production build, and passed 764 local tests. Supabase-connected behavior remains a separate opt-in suite and was not reverified because dedicated test credentials were unavailable. These checks support the implementation. The next proof is a recorded end-to-end playthrough.</p>
+        <p>The latest local review compiled the TypeScript projects, completed the production build, passed 764 local tests, and completed the full Mara-to-Iris browser walkthrough. Supabase-connected behavior remains a separate opt-in suite and was not reverified because dedicated test credentials were unavailable. The next proof is whether players understand and value the loop without demonstration controls.</p>
       </div>
     </section>
 
@@ -135,7 +168,7 @@
       <div class="case-prose">
         <p>I developed the original concept, including paid attempts, permanent death, evolving monsters, teeth as currency, and the belief that a player’s contribution should remain valuable after a character is gone.</p>
         <p>I used Claude and Codex extensively to turn that direction into requirements, architecture, code, tests, and debugging work. My role has been to explain the system I want, decide what belongs in it, review what the tools produce, identify when the result does not match the idea, and keep narrowing the vision into something that can be tested.</p>
-        <p>The next part of owning this project is not hiding that process. It is improving my understanding of the implementation, fixing the current failures, and being able to explain why the system works the way it does.</p>
+        <p>The next part of owning this project is not hiding that process. It is improving my understanding of the implementation, testing the visible behavior, and being able to explain why the system works the way it does.</p>
       </div>
     </section>
 
@@ -146,7 +179,7 @@
         <p>The goal is not only to let players shape the world. It is to make the time, attention, and decisions they contribute matter beyond a single play session. A player’s actions could leave behind monsters, shrines, equipment, currency, and stories that other players can discover, use, trade, or build upon. The larger question is whether players can share in the value they help create instead of that value belonging entirely to the game or the company operating it.</p>
       </div>
       <ul class="next-list">
-        <li><span>01</span><p>Record one hero dying and the next hero encountering the monster, equipment, teeth, and shrine left behind.</p></li>
+        <li><span>01</span><p>Turn the verified consequence loop into a public, player-facing build that does not depend on demonstration controls.</p></li>
         <li><span>02</span><p>Put that loop in front of players and observe whether inheriting another hero’s consequences feels meaningful.</p></li>
         <li><span>03</span><p>Test whether the persistent world still works when those consequences move between different players instead of local characters.</p></li>
         <li><span>04</span><p>Use what players actually value to decide whether the payment and player-owned economy deserves another experiment.</p></li>

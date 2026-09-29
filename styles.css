@@ -163,6 +163,18 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem
 .proof-grid article > span { color: var(--signal); font-family: ui-monospace, "Cascadia Code", monospace; font-size: .75rem; }
 .proof-grid h3 { max-width: 16ch; margin: 3.25rem 0 1rem; font-size: clamp(1.5rem, 2.4vw, 2.1rem); }
 .proof-grid p { color: var(--muted); }
+.proof-sequence { margin-top: clamp(3rem, 7vw, 6rem); }
+.proof-sequence-heading { display: grid; grid-template-columns: .7fr 1.3fr; gap: .5rem clamp(1.5rem, 5vw, 4rem); align-items: start; margin-bottom: 2rem; }
+.proof-sequence-heading .eyebrow { grid-column: 1 / -1; margin-bottom: .35rem; }
+.proof-sequence-heading h3 { max-width: 18ch; margin: 0; font-size: clamp(1.8rem, 3vw, 2.7rem); letter-spacing: -.035em; }
+.proof-sequence-heading > p:last-child { max-width: 44rem; margin: 0; color: var(--muted); }
+.proof-sequence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+.proof-sequence-grid figure { margin: 0; background: var(--ink-soft); }
+.proof-sequence-grid a { display: block; overflow: hidden; background: #000; }
+.proof-sequence-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; transition: opacity .2s ease, transform .2s ease; }
+.proof-sequence-grid a:hover img, .proof-sequence-grid a:focus-visible img { opacity: .86; transform: scale(1.01); }
+.proof-sequence-grid figcaption { min-height: 8.5rem; padding: 1.2rem; color: var(--muted); font-size: .9rem; }
+.proof-sequence-grid figcaption span { display: block; margin-bottom: .7rem; color: var(--signal); font-family: ui-monospace, "Cascadia Code", monospace; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .technical-note { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(1.5rem, 5vw, 4rem); margin-top: 2rem; padding: clamp(1.4rem, 3vw, 2rem); border-left: 3px solid var(--signal); background: rgba(88,230,217,.055); }
 .technical-note .eyebrow { margin-bottom: .55rem; }
 .technical-note h3 { margin-bottom: 0; font-size: clamp(1.4rem, 2.2vw, 1.9rem); letter-spacing: -.025em; }
@@ -198,7 +210,7 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem
   .system-flow li { min-height: 16rem; border-bottom: 1px solid var(--line); }
   .system-flow li:nth-last-child(-n+2) { border-bottom: 0; }
   .system-flow li::after { display: none; }
-  .technical-note { grid-template-columns: 1fr; }
+  .proof-sequence-heading, .technical-note { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   .wordmark-mark { width: 2rem; }
@@ -214,6 +226,8 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem
   .system-flow li:last-child, .evidence-grid article:last-child, .proof-grid article:last-child { border-bottom: 0; }
   .system-flow strong { margin-top: 2rem; }
   .proof-grid h3 { margin-top: 2rem; }
+  .proof-sequence-grid { grid-template-columns: 1fr; }
+  .proof-sequence-grid figcaption { min-height: 0; }
   .experiment-path li { grid-template-columns: 1fr; gap: .55rem; }
   footer { flex-direction: column; }
 }
