@@ -1,6 +1,6 @@
 # Jason M. Ziegler Portfolio Brief
 
-Status: homepage published; case studies in progress
+Status: homepage published; case studies maintained as evidence is verified
 
 Last updated: 2026-09-27
 
@@ -35,7 +35,7 @@ The shorter public expression is:
 | `west.net` | Can attention fund creators and communities without advertising or invisible behavioral extraction? | Detailed MVP, full-vision PRD, micropayment research, and 21 adversarial system tests | Research and planning project; no public product has been validated |
 | `DoneQuest` | How can a large intention become a manageable next action without punishing interruption? | Daily quests, five-minute starts, forgiving carry-forward, and least-authority AI access | Deployed code verified; private authenticated behavior still requires synthetic testing |
 | `Press S for Worker` | Can coding-agent behavior remain local, inspectable, and controlled by its operator? | Tool loop, memory, model switching, dashboard, and focused reliability tests | Portfolio branch and current demo path still need selection and verification |
-| `Grasp of Eternity` | Can many interacting game systems create consequences that feel coherent? | Surface-aware movement, combat, progression, audio iteration, and runtime test discipline | Current gameplay and build state require Unity review before public claims |
+| `Grasp of Eternity` | Can player-controlled space combat support an action-RPG power fantasy built through a modular, expanding ship? | Public Windows alpha, surface-aware combat, persistent loadout progression, deterministic media, accepted integration pass, and verified release package | Ship expansion, arbitrary 3D level traversal, the larger campaign, and independent cold testing remain open |
 | `Little Ecosystem` | Can experimentation make a living system easier to understand? | Aquaponics simulation with persisted experiments and farm layouts | Current Godot runtime and visuals still need re-verification |
 
 The underlying progression is:
@@ -102,7 +102,7 @@ Each flagship project should answer:
 
 ## Extended case-study backlog
 
-The homepage initially features Larn-like, Press S for Worker, and DoneQuest. The projects below remain candidates for deeper case studies as their evidence is verified. The Attention-to-west.net lineage is presented separately as evolving research rather than completed product work.
+The homepage selected work features Larn-like, Grasp of Eternity, Press S for Worker, and DoneQuest. The projects below remain candidates for deeper case studies as their evidence is verified. The Attention-to-west.net lineage is presented separately as evolving research rather than completed product work.
 
 ### 1. Press S for Worker
 
@@ -116,11 +116,13 @@ The homepage initially features Larn-like, Press S for Worker, and DoneQuest. Th
 
 ### 2. Grasp of Eternity
 
-**Story:** Iterative Unity game development spanning surface-aware movement, combat, progression, audio direction, testing, and visual design.
+**Story:** Building a space-combat action RPG where the player keeps free two-dimensional control while levels follow three-dimensional forms, and where every fight feeds the growth of a physical, modular ship.
 
 **Possible evidence:** gameplay video, selected screenshots, design evolution, system diagram, lessons from playtesting.
 
-**Public boundary:** a case study or build can be public even if source remains private. Current runtime and build status must be verified before making claims.
+**Current case-study evidence:** the public site at `https://graspofeternity.com/` presents authentic gameplay captures and a free Windows alpha. The October 2 package is a 66 MiB ZIP with public platform, installation, SmartScreen and SHA-256 information. It was extracted outside the Unity project and completed the standalone frontend smoke path with 16 of 16 checks passing and zero exceptions. Jason accepted the onboarding and full-integration milestones after hands-on keyboard, mouse and gamepad review. The case study distinguishes those checks from the independent cold test, which is still open.
+
+**Public boundary:** source remains private. Do not present the alpha as a finished commercial game, imply independent-player validation, or hide the known first-launch, unsigned-executable and application-metadata limitations. The next evidence milestone is the recorded external cold test and a bounded decision list for its findings.
 
 ### 3. DoneQuest
 

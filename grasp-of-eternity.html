@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Jason M. Ziegler is building a space-combat action RPG around modular ship growth, player-controlled movement, and combat across curved surfaces.">
+  <meta name="theme-color" content="#071014">
+  <title>Grasp of Eternity case study | Jason M. Ziegler</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23071014'/%3E%3Cpath d='M17 17h30v9H27v8h15v9H27v4H17V17Z' fill='%2358e6d9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#case-study">Skip to case study</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Jason M. Ziegler, home">
+      <span class="wordmark-mark" aria-hidden="true">JZ</span>
+      <span>Jason M. Ziegler</span>
+    </a>
+    <nav aria-label="Case study navigation">
+      <a href="index.html#work">All work</a>
+      <a href="#idea">Question</a>
+      <a href="#system">System</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main id="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow">Grasp of Eternity · Public alpha · Case study</p>
+        <h1 id="case-title">Can space combat deliver an action-RPG power fantasy?</h1>
+        <p class="hero-summary">The larger vision for Grasp of Eternity starts with a small ship and a single weapon, then lets the player fight, collect, scrap, craft, reposition weapons, expand the ship, and grow into power on an epic scale.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://graspofeternity.com/">Play the free alpha</a>
+          <a class="button button-secondary" href="#evidence">See the evidence</a>
+        </div>
+      </div>
+      <aside class="case-facts" aria-label="Project facts">
+        <p><span>Status</span><strong>Public Windows alpha</strong></p>
+        <p><span>Stack</span><strong>Unity 6, C#, URP, Blender</strong></p>
+        <p><span>My role</span><strong>Concept, game direction, requirements, review, testing, release decisions</strong></p>
+        <p><span>Development</span><strong>Solo-directed, implemented with modern AI tools</strong></p>
+        <p><span>Release checked</span><strong>October 2, 2026</strong></p>
+      </aside>
+    </section>
+
+    <figure class="case-image">
+      <img src="assets/grasp-combat.webp" alt="The player warship firing through pale cyan weapon arcs while hostile craft close among asteroids and wreckage.">
+      <figcaption>Actual gameplay from the public alpha. The four weapon mounts cover different firing angles while the battlefield curves across a surface-aware combat plane.</figcaption>
+    </figure>
+
+    <section class="case-section case-origin" id="idea" aria-labelledby="idea-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The game question</p>
+        <h2 id="idea-title">Build the power curve into the ship itself.</h2>
+      </div>
+      <div class="case-prose">
+        <p>Grasp of Eternity asks whether the build-making, loot decisions, and escalating power of an action RPG can live inside a player-controlled spacecraft. Weapons are physical parts of the ship: they can be crafted, upgraded, and moved between mounts, while the vessel itself becomes the visible record of progression.</p>
+        <p>That fantasy rests on an earlier technical question: can a spacecraft still feel responsive while it moves across flat and curved combat surfaces? The player should keep full two-dimensional control, but the level can follow a three-dimensional form. As the active surface bends or changes, the world shifts beneath the ship without turning the experience into a rail shooter.</p>
+        <p>The story gives that growth somewhere to go. Humanity pushes beyond its protected corner of space, takes power it barely understands, and draws stronger responses as it reaches farther into a dark-forest universe. That campaign remains a design direction; the public alpha proves only its first playable mechanical foundation.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="system" aria-labelledby="system-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">The playable slice</p>
+        <h2 id="system-title">Fight. Collect. Scrap. Craft. Upgrade. Fight again.</h2>
+        <p>The alpha narrows the larger vision to one asteroid-field combat zone, one Hub, and one loop whose parts can be played, observed, and judged together.</p>
+      </div>
+      <ol class="system-flow" aria-label="Grasp of Eternity progression loop">
+        <li><span>01</span><strong>Fight</strong><p>Fly, aim, lock targets, and manage four weapon arcs while enemy formations apply different kinds of pressure.</p></li>
+        <li><span>02</span><strong>Collect</strong><p>Recover components and choose when to leave. The portal stays available until an awakened boss jams the route home.</p></li>
+        <li><span>03</span><strong>Scrap, craft, and upgrade</strong><p>Carry hull damage home, dismantle parts for scrap, craft weapons, and move them between Fore, Port, Starboard, and Aft mounts.</p></li>
+        <li><span>04</span><strong>Fight again with more power</strong><p>Launch the same persistent ship, defeat the boss, and turn its core into a permanent weapon modifier.</p></li>
+      </ol>
+    </section>
+
+    <section class="case-section" aria-labelledby="built-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What exists now</p>
+        <h2 id="built-title">One complete step on a much larger power curve.</h2>
+      </div>
+      <div class="evidence-grid">
+        <article><span>01</span><h3>2D control across a 3D world</h3><p>Movement, targeting, pursuit, weapon arcs, and projectiles share an active flat or curved surface. The current battlefield proves the foundation for future levels that can cross a three-dimensional form without putting the ship on rails.</p></article>
+        <article><span>02</span><h3>A persistent warship</h3><p>Hull damage, installed weapons, mount positions, and earned modifiers survive the trip between combat and the Hub.</p></article>
+        <article><span>03</span><h3>Progression with visible causes</h3><p>Enemy drops reveal recipes, dismantling creates repair currency, and boss salvage becomes a Power Orb that permanently changes one weapon.</p></article>
+        <article><span>04</span><h3>A unified presentation layer</h3><p>The title screen, HUD, Hub, console, adaptive score, deterministic sound effects, hints, and settings use one restrained signal language.</p></article>
+      </div>
+
+      <div class="proof-sequence" aria-labelledby="sequence-title">
+        <div class="proof-sequence-heading">
+          <p class="eyebrow">Two halves of one ship</p>
+          <h3 id="sequence-title">The loadout exists in the hangar and in the fight.</h3>
+          <p>The Hub is not a disconnected menu. The docked vessel reflects the live equipment state, and the console lets the player reconfigure that same ship before returning to combat.</p>
+        </div>
+        <div class="proof-sequence-grid">
+          <figure>
+            <a href="assets/grasp-hub.webp"><img src="assets/grasp-hub.webp" alt="The player character standing on an industrial hangar platform across from the docked player warship."></a>
+            <figcaption><span>The Hub</span>The persistent ship waits across the bay while the player walks between the console and launch platform.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/grasp-console.webp"><img src="assets/grasp-console.webp" alt="The ship systems console showing the warship, four mounts, inventory, weapon details, fabrication slots, and recipes."></a>
+            <figcaption><span>Ship systems</span>The live loadout, inventory, fabrication, repair, and mount choices are visible in one keyboard-and-gamepad interface.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section verification-section" id="evidence" aria-labelledby="evidence-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What the public alpha proves today</p>
+        <h2 id="evidence-title">The full loop can leave the repository and survive contact with a real release.</h2>
+        <p>The evidence supports a playable public alpha. It does not turn the prototype into a finished commercial game or replace independent player feedback.</p>
+      </div>
+      <div class="proof-grid">
+        <article><span>01</span><h3>Direction accepted through the release gate</h3><p>Jason accepted the presentation, onboarding, and full integration milestones after hands-on keyboard, mouse, and gamepad review.</p></article>
+        <article><span>02</span><h3>The package was tested as a package</h3><p>The 66 MiB Windows ZIP was extracted outside the project and completed the standalone frontend smoke path: 16 of 16 checks passed, with zero exceptions.</p></article>
+        <article><span>03</span><h3>The release is inspectable</h3><p>The public page names the platform, build date, file size, unsigned-app warning, extraction steps, and SHA-256 checksum instead of hiding release friction.</p></article>
+        <article><span>04</span><h3>The remaining uncertainty is explicit</h3><p>Independent cold testing is still open. Known first-launch, signing, and application-metadata limitations remain inputs to the next fix pass.</p></article>
+      </div>
+
+      <div class="technical-note">
+        <div>
+          <p class="eyebrow">Verification discipline</p>
+          <h3>Code, captures, standalone behavior, and human acceptance are different claims.</h3>
+        </div>
+        <p>The project records automated checks, graphics captures, performance observations, fresh-build smoke tests, and hands-on judgment separately. A compiled script is not proof of scene wiring; a passing metric is not proof that an effect sounds or feels right; a deployment is not proof that a stranger can understand the game.</p>
+      </div>
+    </section>
+
+    <section class="case-section collaboration-section" aria-labelledby="collaboration-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">How it was made</p>
+        <h2 id="collaboration-title">One creative direction, implemented through many bounded tools.</h2>
+      </div>
+      <div class="case-prose">
+        <p>I imagined the game, directed the combat feel and progression, made scope and aesthetic decisions, reviewed each milestone, and decided what was ready to keep or release.</p>
+        <p>Modern AI tools helped turn that direction into C# systems, Unity scene work, Blender-generated geometry, deterministic audio scripts, test infrastructure, documentation, and repeated implementation passes.</p>
+        <p>The collaboration is part of the project’s evidence: the useful question is not whether a tool produced code, but whether the resulting system can be inspected, tested, played, and accepted against an explicit intention.</p>
+      </div>
+    </section>
+
+    <section class="case-section" id="next" aria-labelledby="next-title">
+      <div class="case-section-heading">
+        <p class="eyebrow">What comes next</p>
+        <h2 id="next-title">Let unfamiliar players find the weak links.</h2>
+        <p>The next milestone is not more content. It is a cold-test cycle that observes where players hesitate, misread the objective, or fail to recover without coaching.</p>
+      </div>
+      <ol class="next-list">
+        <li><span>01</span><p>Distribute the public alpha to outside testers using the current onboarding and no out-of-band instructions.</p></li>
+        <li><span>02</span><p>Log every blocker, hesitation, wrong control press, and misunderstood objective.</p></li>
+        <li><span>03</span><p>Turn the findings into a bounded fix-or-accept decision list before authorizing the next implementation milestone.</p></li>
+      </ol>
+
+      <div class="case-closing">
+        <p>Grasp of Eternity is now public enough to test the first step in its larger question: does fighting, reconfiguring the ship, and returning with more power make players want to keep growing?</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://graspofeternity.com/">Play the free alpha</a>
+          <a class="button button-secondary" href="index.html#work">Back to selected work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Jason M. Ziegler</span><span>Grasp of Eternity · Public alpha case study</span></footer>
+</body>
+</html>
